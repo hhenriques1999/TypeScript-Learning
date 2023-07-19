@@ -1,9 +1,15 @@
+enum Color {
+    Red,
+    Green,
+    Blue    
+}
+
 class Car {
     #id: number;
-    color: string;
+    color: Color;
     isElectric: boolean;
 
-    constructor(id: number, color: string, isElectric: boolean) {
+    constructor(id: number, color: Color, isElectric: boolean) {
         this.#id = id;
         this.color = color;
         this.isElectric = isElectric;
@@ -16,11 +22,14 @@ class Car {
     setId(id:number) : void {
         this.#id = id;
     }
+
+    getColor() : Color {
+        return this.color;
+    }
+
 }
 
 
-const d : Car = new Car(5, "Green", false);
+const d : Car = new Car(5, Color.Green, false);
 
-console.log(d.getId());
-d.setId(3);
 console.log(d.getId());
