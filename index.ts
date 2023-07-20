@@ -5,22 +5,22 @@ enum Color {
 }
 
 class Car {
-    #id: number;
+    id: number;
     color: Color;
     isElectric: boolean;
 
     constructor(id: number, color: Color, isElectric: boolean) {
-        this.#id = id;
+        this.id = id;
         this.color = color;
         this.isElectric = isElectric;
     }
 
     getId() : number {
-        return this.#id;
+        return this.id;
     }
 
     setId(id:number) : void {
-        this.#id = id;
+        this.id = id;
     }
 
     getColor() : Color {
